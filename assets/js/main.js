@@ -17,7 +17,7 @@ $(function(){
     for (const key in studentOne) {
         // console.log(studentOne[key]);
         //se aggiungo key posso visualizzare il nome della key
-        console.log(key, studentOne[key]);
+        // console.log(key, studentOne[key]);
     }
     //creazione obj altri studenti
     var studentTwo = {
@@ -58,8 +58,10 @@ $(function(){
         lastName : userLastname,
         age : userAge
     } 
-   // push nuovo studente
-       arrayStudents.push(studentSix);
-
-   console.log(arrayStudents);
+    // push nuovo studente
+    arrayStudents.push(studentSix);
+    
+    console.log(arrayStudents);
+    document.getElementById('student_name').innerHTML = studentSix.name + ' ' + studentSix.lastName +' '+studentSix.age ;
+    
 });
