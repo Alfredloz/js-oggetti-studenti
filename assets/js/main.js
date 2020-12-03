@@ -14,11 +14,11 @@ $(function(){
     }
     // console.log(studentOne);
     // stampa ciclo for in tutte le proprietà di studentOne
-    for (const key in studentOne) {
-        // console.log(studentOne[key]);
-        //se aggiungo key posso visualizzare il nome della key
-        // console.log(key, studentOne[key]);
-    }
+    // for (const key in studentOne) {
+    //     // console.log(studentOne[key]);
+    //     //se aggiungo key posso visualizzare il nome della key
+    //     // console.log(key, studentOne[key]);
+    // }
     //creazione obj altri studenti
     var studentTwo = {
         name : 'Gino',
@@ -45,10 +45,7 @@ $(function(){
     var arrayStudents = [studentOne, studentTwo, studentThree, studentFour, studentFive,];
     // console.log(arrayStudents);
 
-    //creazione ciclo array students
-    for (const key in arrayStudents) {
-      console.log(arrayStudents[key].name +' '+ arrayStudents[key].lastName);
-    }
+   
     //inserimento nuovo studente
     var userName = prompt('inserisci il tuo nome');
     var userLastname = prompt('inserisci il tuo cognome');
@@ -62,6 +59,13 @@ $(function(){
     arrayStudents.push(studentSix);
     
     console.log(arrayStudents);
+    //stampa ultimo studente arrivato
     document.getElementById('student_name').innerHTML = studentSix.name + ' ' + studentSix.lastName +' '+studentSix.age ;
-    
+     //creazione ciclo array students
+     for (var key in arrayStudents) {
+        //  TODO console log per vedere solo nome e cognome.
+        // console.log(arrayStudents[key].name +' '+ arrayStudents[key].lastName);
+        //innerHTML 
+        document.getElementById('student_class').innerHTML= arrayStudents[key] +' '+ arrayStudents[key].name +' '+ arrayStudents[key].lastName ;
+      }
 });
